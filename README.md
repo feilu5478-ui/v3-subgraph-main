@@ -19,3 +19,4 @@
 
 Note: Deployments will fail if there are uncommitted changes in the subgraph. Please commit your changes before deploying.
 
+graph deploy --node https://api.studio.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --deploy-key 6cdfde80a8fa5dacf289dd947488673e uniswap-sepolia v3-subgraph.yaml
