@@ -27,5 +27,6 @@ graph deploy --node https://api.studio.thegraph.com/deploy/ --ipfs https://api.t
 或
 `npm install -g @graphprotocol/graph-cli`
 2. 部署命令
-`graph deploy <子图名称> --version-label <版本号> --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key <部署密钥> --ipfs https://ipfs.satsuma.xyz`
-例：`graph deploy uni --version-label v1 --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key 8vxxxxxxx --ipfs https://ipfs.satsuma.xyz`
+`graph deploy <子图名称> <可选参数：yaml文件名称> --version-label <版本号> --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key <部署密钥> --ipfs https://ipfs.satsuma.xyz`
+例：`graph deploy uni v3-subgraph.yaml --version-label v1 --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key 8vxxxxxxx --ipfs https://ipfs.satsuma.xyz`
+如果没有提供yaml文件名称将默认为subgraph.yaml
