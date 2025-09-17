@@ -32,4 +32,4 @@ Note: Deployments will fail if there are uncommitted changes in the subgraph. Pl
 例：`graph deploy uni v3-subgraph.yaml --version-label v1 --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key 8vxxxxxxx --ipfs https://ipfs.satsuma.xyz`
 如果没有提供yaml文件名称将默认为subgraph.yaml
 4. 部署至studio官方命令：
-`graph deploy --node https://api.studio.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --deploy-key 6cdfde80a8fa5dacf289dd947488673e uniswap-sepolia v3-subgraph.yaml`
+`graph deploy --node https://api.studio.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --deploy-key 6cxxxxxxxxxxxxxxxx uni-sep v3-subgraph.yaml`
