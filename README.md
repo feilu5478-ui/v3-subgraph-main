@@ -110,3 +110,116 @@ AssemblyScript 映射允许您使用 schema 中定义的实体类型保存要索
     实体定义的文件, 使用 GraphQL 接口定义语言, 具体参考网上相关文档
     3. mapping.ts
     定义如何转换区块数据到实体数据
+
+## 部署成功返回示例
+1. The Graph:
+`graph deploy --node https://api.studio.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ --deploy-key xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx uniswap-sepolia v3-subgraph.yaml
+√ Which version label to use? (e.g. "v0.0.1") · v0.0.1
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+  Skip migration: Bump mapping apiVersion from 0.0.5 to 0.0.6
+  Skip migration: Bump manifest specVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump manifest specVersion from 0.0.2 to 0.0.4
+√ Apply migrations
+√ Load subgraph from v3-subgraph.yaml
+  Compile data source: Factory => build\Factory\Factory.wasm
+  Compile data source template: Pool => build\templates\Pool\Pool.wasm
+√ Compile subgraph
+  Copy schema file build\schema.graphql
+  Write subgraph file build\Factory\factory.json
+  Write subgraph file build\Factory\ERC20.json
+  Write subgraph file build\Factory\ERC20SymbolBytes.json
+  Write subgraph file build\Factory\ERC20NameBytes.json
+  Write subgraph file build\Factory\pool.json
+  Write subgraph file build\Pool\pool.json
+  Write subgraph file build\Pool\factory.json
+  Write subgraph file build\Pool\ERC20.json
+  Write subgraph manifest build\subgraph.yaml
+√ Write compiled subgraph to build\
+  Add file to IPFS build\schema.graphql
+                .. Qmcyya43h1vbDJtGc2SBJ4yicPhGHmW3aL2P5qhuLRMcNM
+  Add file to IPFS build\Factory\factory.json
+                .. QmTU8eKx6pCgtff6Uvc7srAwR8BPiM3jTMBw9ahrXBjRzY
+  Add file to IPFS build\Factory\ERC20.json
+                .. QmWPALJpvDK6AzWmj6HwGsyJDu9qGKUW6Hf5V4Ez4VYDpT
+  Add file to IPFS build\Factory\ERC20SymbolBytes.json
+                .. QmbHnhUFZa6qqqRyubUYhXntox1TCBxqryaBM1iNGqVJzT
+  Add file to IPFS build\Factory\ERC20NameBytes.json
+                .. QmQCP6Pdp1MqpwRv2qoPHuUTwZGy7Q3eDHg4w5kzwE9mBj
+  Add file to IPFS build\Factory\pool.json
+                .. QmULRc8Ac1J6YFy11z7JRpyThb6f7nmL5mMTQvN7LKj2Vy
+  Add file to IPFS build\Factory\Factory.wasm
+                .. QmXBaUwkd2RFJ9dh5qQ6sv8FyttATMrHvEjfCLK63HevAj
+  Add file to IPFS build\Pool\pool.json
+                .. QmULRc8Ac1J6YFy11z7JRpyThb6f7nmL5mMTQvN7LKj2Vy (already uploaded)
+  Add file to IPFS build\Pool\factory.json
+                .. QmTU8eKx6pCgtff6Uvc7srAwR8BPiM3jTMBw9ahrXBjRzY (already uploaded)
+  Add file to IPFS build\Pool\ERC20.json
+                .. QmWPALJpvDK6AzWmj6HwGsyJDu9qGKUW6Hf5V4Ez4VYDpT (already uploaded)
+  Add file to IPFS build\templates\Pool\Pool.wasm
+                .. QmNTcNdjiuH1GYkuksKCtxxXWa2KBFuF9LyFcpcQDnyFmr
+√ Upload subgraph to IPFS
+
+Build completed: QmSZDjkbAaJTGgsMTaPeBeJ8hF4Je7uo414NjxNPrcQJDa
+
+Deployed to https://thegraph.com/studio/subgraph/uniswap-sepolia
+
+Subgraph endpoints:
+Queries (HTTP):     https://api.studio.thegraph.com/query/118077/uniswap-sepolia/v0.0.1`
+2. Alchemy
+`graph deploy uni-sep v3-subgraph.yaml --version-label v0.0.1-new-version --node https://subgraphs.alchemy.com/api/subgraphs/deploy --deploy-key xxxxxxxxxxxxxxxx --ipfs https://ipfs.satsuma.xyz
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+  Skip migration: Bump mapping apiVersion from 0.0.5 to 0.0.6
+  Skip migration: Bump manifest specVersion from 0.0.1 to 0.0.2
+  Skip migration: Bump manifest specVersion from 0.0.2 to 0.0.4
+√ Apply migrations
+√ Load subgraph from v3-subgraph.yaml
+  Compile data source: Factory => build\Factory\Factory.wasm
+  Compile data source template: Pool => build\templates\Pool\Pool.wasm
+√ Compile subgraph
+  Copy schema file build\schema.graphql
+  Write subgraph file build\Factory\factory.json
+  Write subgraph file build\Factory\ERC20.json
+  Write subgraph file build\Factory\ERC20SymbolBytes.json
+  Write subgraph file build\Factory\ERC20NameBytes.json
+  Write subgraph file build\Factory\pool.json
+  Write subgraph file build\Pool\pool.json
+  Write subgraph file build\Pool\factory.json
+  Write subgraph file build\Pool\ERC20.json
+  Write subgraph manifest build\subgraph.yaml
+√ Write compiled subgraph to build\
+  Add file to IPFS build\schema.graphql
+                .. Qmcyya43h1vbDJtGc2SBJ4yicPhGHmW3aL2P5qhuLRMcNM
+  Add file to IPFS build\Factory\factory.json
+                .. QmTU8eKx6pCgtff6Uvc7srAwR8BPiM3jTMBw9ahrXBjRzY
+  Add file to IPFS build\Factory\ERC20.json
+                .. QmWPALJpvDK6AzWmj6HwGsyJDu9qGKUW6Hf5V4Ez4VYDpT
+  Add file to IPFS build\Factory\ERC20SymbolBytes.json
+                .. QmbHnhUFZa6qqqRyubUYhXntox1TCBxqryaBM1iNGqVJzT
+  Add file to IPFS build\Factory\ERC20NameBytes.json
+                .. QmQCP6Pdp1MqpwRv2qoPHuUTwZGy7Q3eDHg4w5kzwE9mBj
+  Add file to IPFS build\Factory\pool.json
+                .. QmULRc8Ac1J6YFy11z7JRpyThb6f7nmL5mMTQvN7LKj2Vy
+  Add file to IPFS build\Factory\Factory.wasm
+                .. QmPkuoZDUQC8AMcpiqL2uewXXTQHZKdKT7exHVtEXmVse9
+  Add file to IPFS build\Pool\pool.json
+                .. QmULRc8Ac1J6YFy11z7JRpyThb6f7nmL5mMTQvN7LKj2Vy (already uploaded)
+  Add file to IPFS build\Pool\factory.json
+                .. QmTU8eKx6pCgtff6Uvc7srAwR8BPiM3jTMBw9ahrXBjRzY (already uploaded)
+  Add file to IPFS build\Pool\ERC20.json
+                .. QmWPALJpvDK6AzWmj6HwGsyJDu9qGKUW6Hf5V4Ez4VYDpT (already uploaded)
+  Add file to IPFS build\templates\Pool\Pool.wasm
+                .. QmaTXV8ovJ78oPpN92QejoCRx5ZAH7oJSQjKXGwyCWZifM
+√ Upload subgraph to IPFS
+
+Build completed: QmXNFbar8bS44BuUmBTj6Vxxo3pit1LpSD8n6UV6Gb8HZ5
+
+Deployed to https://subgraphs.alchemy.com/subgraphs/14626/versions/50743
+
+Subgraph endpoints:
+Queries (HTTP):     https://subgraph.satsuma-prod.com/e--s-team--270151/uni-sep/version/v0.0.1-new-version/api`
